@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "docker-aspnetcore-react", "src\docker-aspnetcore-react.csproj", "{E60B5343-FE4C-4857-BE6D-611EA092A19B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "docker-aspnetcore-xunit-tests", "tests\docker-aspnetcore-xunit-tests\docker-aspnetcore-xunit-tests.csproj", "{16926EF7-7F5D-4A9F-BF5F-94DE9EBC9521}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E60B5343-FE4C-4857-BE6D-611EA092A19B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E60B5343-FE4C-4857-BE6D-611EA092A19B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E60B5343-FE4C-4857-BE6D-611EA092A19B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16926EF7-7F5D-4A9F-BF5F-94DE9EBC9521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16926EF7-7F5D-4A9F-BF5F-94DE9EBC9521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16926EF7-7F5D-4A9F-BF5F-94DE9EBC9521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16926EF7-7F5D-4A9F-BF5F-94DE9EBC9521}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

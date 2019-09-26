@@ -26,6 +26,10 @@ COPY . .
 WORKDIR "/src/"
 RUN dotnet build "docker-aspnetcore-react.sln" -c Release -o /app
 
+FROM build AS test
+WORKDIR /src
+ENTRYPOINT ["dotnet", "test", "--logger:trx", "--results-directory", "/testsresults"]
+
 FROM build AS publish
 RUN dotnet publish "docker-aspnetcore-react.sln" -c Release -o /app
 

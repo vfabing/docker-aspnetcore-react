@@ -5,7 +5,12 @@ VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "docker-aspnetcore-react", "src\docker-aspnetcore-react.csproj", "{E60B5343-FE4C-4857-BE6D-611EA092A19B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "docker-aspnetcore-xunit-tests", "tests\docker-aspnetcore-xunit-tests\docker-aspnetcore-xunit-tests.csproj", "{16926EF7-7F5D-4A9F-BF5F-94DE9EBC9521}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "docker-aspnetcore-xunit-tests", "tests\docker-aspnetcore-xunit-tests\docker-aspnetcore-xunit-tests.csproj", "{16926EF7-7F5D-4A9F-BF5F-94DE9EBC9521}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2E2A572A-F581-4E6B-9DF3-209DC22942B8}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

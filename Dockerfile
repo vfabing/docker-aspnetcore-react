@@ -11,23 +11,23 @@ RUN apt-get install --yes nodejs
 
 # Restore .NET dependencies
 WORKDIR /src
-COPY ["docker-aspnetcore-react.csproj", ""]
-RUN dotnet restore "docker-aspnetcore-react.csproj"
+COPY ["src/docker-aspnetcore-react.csproj", "src/"]
+RUN dotnet restore "src/docker-aspnetcore-react.csproj"
 
 # Restore NPM dependencies
-COPY ["ClientApp/package.json", "ClientApp/"]
-COPY ["ClientApp/package-lock.json", "ClientApp/"]
-WORKDIR /src/ClientApp
+COPY ["src/ClientApp/package.json", "src/ClientApp/"]
+COPY ["src/ClientApp/package-lock.json", "src/ClientApp/"]
+WORKDIR /src/src/ClientApp
 RUN npm install
 
 # Copy Source code and Build
 WORKDIR /src
 COPY . .
 WORKDIR "/src/"
-RUN dotnet build "docker-aspnetcore-react.csproj" -c Release -o /app
+RUN dotnet build "docker-aspnetcore-react.sln" -c Release -o /app
 
 FROM build AS publish
-RUN dotnet publish "docker-aspnetcore-react.csproj" -c Release -o /app
+RUN dotnet publish "docker-aspnetcore-react.sln" -c Release -o /app
 
 FROM base AS final
 WORKDIR /app
